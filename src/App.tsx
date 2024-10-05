@@ -17,10 +17,9 @@ function App() {
           <motion.div
             className="overflow-hidden -mt-3"
             initial={{ x: "-100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }} 
-            transition={{ duration: 1.5, ease: "easeInOut" }} 
-            style={{ maxWidth: "32%", width: "100%", marginLeft: "8%" }}
-          >
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            style={{ maxWidth: "32%", width: "100%", marginLeft: "8%" }}>
             <Card className="p-10 bg-slate-300" radius="lg">
               <CardBody>
                 <h1 className="text-6xl p-3 px-1 font-medium text-slate-700">
@@ -51,7 +50,7 @@ function App() {
           Learn more
         </Button>
       </div>
-      <div className="flex justify-center flex-col items-start bg-gradient-to-l from-blue-950 to-gray-600 p-4 pb-28">
+      <div className="flex justify-center flex-col items-start bg-gradient-to-l from-blue-950 to-cyan-500 p-4 pb-28">
         <div className="w-1/2 mx-auto">
           <h2 className="text-5xl font-medium text-gray-200 py-3">
             Our Services
@@ -67,12 +66,36 @@ function App() {
         </div>
       </div>
       <div className="bg-transparent grid grid-cols-3 place-items-center w-1/2 -mt-16 gap-6 mx-auto">
-        <FlatCard title="Card 1" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
-        <FlatCard title="Card 2" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
-        <FlatCard title="Card 3" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
-        <FlatCard title="Card 4" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
-        <FlatCard title="Card 5" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
-        <FlatCard title="Card 6" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
+        <FlatCard
+          title="Card 1"
+          description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet"
+          className="col-span-1 w-full"
+        />
+        <FlatCard
+          title="Card 2"
+          description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet"
+          className="col-span-1 w-full"
+        />
+        <FlatCard
+          title="Card 3"
+          description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet"
+          className="col-span-1 w-full"
+        />
+        <FlatCard
+          title="Card 4"
+          description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet"
+          className="col-span-1 w-full"
+        />
+        <FlatCard
+          title="Card 5"
+          description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet"
+          className="col-span-1 w-full"
+        />
+        <FlatCard
+          title="Card 6"
+          description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet"
+          className="col-span-1 w-full"
+        />
       </div>
     </>
   );
