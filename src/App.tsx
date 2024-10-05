@@ -1,13 +1,13 @@
 import { Button, Card, CardBody } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import NavigationBar from "./components/Navbar";
-
+import headerLogo from "./assets/header.webp";
 function App() {
 
   return (
     <>
       <NavigationBar />
-      <img src="/public/header.webp" alt="header" />
+      <img src={headerLogo} alt="hero" className="w-full h-[500px] object-cover" />
       <div className="pb-2">
         <div className="flex justify-center overflow-hidden -mt-3">
           <motion.div
