@@ -3,19 +3,22 @@ import { motion } from "framer-motion";
 import NavigationBar from "./components/Navbar";
 import headerLogo from "./assets/header.webp";
 function App() {
-
   return (
     <>
       <NavigationBar />
-      <img src={headerLogo} alt="hero" className="w-full h-[500px] object-cover" />
+      <img
+        src={headerLogo}
+        alt="hero"
+        className="w-full h-[500px] object-cover"
+      />
       <div className="pb-2">
         <div className="flex justify-center overflow-hidden -mt-3">
           <motion.div
             className="overflow-hidden -mt-3"
-            initial={{ x: "-100vw", opacity: 0 }} // El contenedor empieza fuera del viewport (a la izquierda)
-            animate={{ x: 0, opacity: 1 }} // Se mueve al centro y aparece gradualmente
-            transition={{ duration: 1.5, ease: "easeInOut" }} // Transición suave
-            style={{ maxWidth: "32%", width: "100%", marginLeft: '8%' }} // Controlamos el ancho máximo del contenedor
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }} 
+            transition={{ duration: 1.5, ease: "easeInOut" }} 
+            style={{ maxWidth: "32%", width: "100%", marginLeft: "8%" }}
           >
             <Card className="p-10 bg-slate-300" radius="lg">
               <CardBody>
@@ -39,15 +42,27 @@ function App() {
             </Card>
           </motion.div>
         </div>
-        <Button className="w-auto ml-[64%]" variant="ghost" color="primary" size="md">
+        <Button
+          className="w-auto ml-[64%]"
+          variant="ghost"
+          color="primary"
+          size="md">
           Learn more
         </Button>
       </div>
       <div className="flex justify-center flex-col items-start bg-gradient-to-l from-blue-950 to-gray-600 p-4">
         <div className="w-1/2 mx-auto">
-        <h2 className="text-5xl font-medium text-gray-200 py-3">Our Services</h2>
-        <p className="text-gray-200 text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate sit odio corrupti nostrum laboriosam necessitatibus, alias in dignissimos sapiente porro fugiat unde consequatur vel blanditiis. Commodi, ullam! Illum, ipsam necessitatibus.
-        Ipsa ducimus minima soluta amet vitae temporibus, quis corrupti, aliquam, veritatis rem ullam expedita tempore repellat!</p>
+          <h2 className="text-5xl font-medium text-gray-200 py-3">
+            Our Services
+          </h2>
+          <p className="text-gray-200 text-lg">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+            sit odio corrupti nostrum laboriosam necessitatibus, alias in
+            dignissimos sapiente porro fugiat unde consequatur vel blanditiis.
+            Commodi, ullam! Illum, ipsam necessitatibus. Ipsa ducimus minima
+            soluta amet vitae temporibus, quis corrupti, aliquam, veritatis rem
+            ullam expedita tempore repellat!
+          </p>
         </div>
       </div>
     </>
