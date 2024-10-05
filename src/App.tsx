@@ -2,6 +2,7 @@ import { Button, Card, CardBody } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import NavigationBar from "./components/Navbar";
 import headerLogo from "./assets/header.webp";
+import FlatCard from "./components/Card";
 function App() {
   return (
     <>
@@ -50,7 +51,7 @@ function App() {
           Learn more
         </Button>
       </div>
-      <div className="flex justify-center flex-col items-start bg-gradient-to-l from-blue-950 to-gray-600 p-4">
+      <div className="flex justify-center flex-col items-start bg-gradient-to-l from-blue-950 to-gray-600 p-4 pb-28">
         <div className="w-1/2 mx-auto">
           <h2 className="text-5xl font-medium text-gray-200 py-3">
             Our Services
@@ -64,6 +65,14 @@ function App() {
             ullam expedita tempore repellat!
           </p>
         </div>
+      </div>
+      <div className="bg-transparent grid grid-cols-3 place-items-center w-1/2 -mt-16 gap-6 mx-auto">
+        <FlatCard title="Card 1" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
+        <FlatCard title="Card 2" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
+        <FlatCard title="Card 3" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
+        <FlatCard title="Card 4" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
+        <FlatCard title="Card 5" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
+        <FlatCard title="Card 6" description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet" className="col-span-1 w-full"/>
       </div>
     </>
   );
