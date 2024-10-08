@@ -2,7 +2,9 @@ import { Button, Card, CardBody } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import NavigationBar from "./components/Navbar";
 import headerLogo from "./assets/header.webp";
+import logo from "./assets/logo.jpg"
 import FlatCard from "./components/Card";
+import Footer from "./components/Fotter";
 function App() {
   return (
     <>
@@ -65,7 +67,7 @@ function App() {
           </p>
         </div>
       </div>
-      <div className="bg-transparent grid grid-cols-3 place-items-center w-1/2 -mt-16 gap-6 mx-auto">
+      <div className="bg-transparent grid grid-cols-3 place-items-center w-1/2 -mt-16 gap-6 mx-auto pb-14">
         <FlatCard
           title="Card 1"
           description="Lorem ipsum dolor sit amet wrw Lorem ipsum dolor sit amet wwrwer Lorem ipsum dolor sit amet ewfwer Lorem ipsum dolor sit amet fevwrg Lorem ipsum dolor sit amet evfewvdf Lorem ipsum dolor sit amet efvewr Lorem ipsum dolor sit amet efvewf Lorem ipsum dolor sit amet ergs Lorem ipsum dolor sit amet"
@@ -97,6 +99,17 @@ function App() {
           className="col-span-1 w-full"
         />
       </div>
+      <div className="flex flex-col md:flex-row justify-between mx-auto w-2/3 max-w-full gap-x-10 pb-6">
+        <img src={logo} alt="logo" className="w-1/2" />
+        <div className="flex flex-col items-start w-1/2 p-4">
+          <h2 className="text-5xl text-gray-800">Contact Us</h2>
+          <p className="text-gray-500 text-lg mt-4">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero voluptates aut quidem qui. Hic non rem velit at quis iste totam obcaecati laborum. Harum atque autem, vero magni quaerat sint!
+            Reiciendis illo, laborum eos fuga eum asperiores repudiandae tempora quisquam veniam commodi magni, molestiae excepturi dicta doloribus, sit tempore saepe iusto rerum! Dolores natus voluptatum suscipit! Natus molestias minus blanditiis?
+          </p>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 }
