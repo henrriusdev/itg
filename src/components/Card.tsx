@@ -4,29 +4,31 @@ export default function FlatCard({
   className,
   radius,
   title,
-  description,
+  list,
   ...props
-}: CardProps & { title: string; description: string; className?: string }) {
+}: CardProps & { title: string; list: string[]; className?: string }) {
   return (
       <Card
-        className={"p-2 bg-slate-300 " + className}
+        className={"bg-slate-300 " + className}
         radius={radius}
         {...props}>
         <CardBody>
           <motion.h3
-            className="text-3xl font-bold text-slate-700"
+            className="text-3xl font-bold text-slate-700 text-center pb-4 p-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}>
             {title}
           </motion.h3>
-          <motion.p
-            className="mt-2 text-lg text-slate-500"
+          <motion.ul
+            className="mt-2 text-xl list-disc ml-4 text-slate-500 p-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}>
-            {description}
-          </motion.p>
+            {list.map((item, index) => (
+              <li key={`${item}-${index}`}>{item}</li>
+            ))}
+          </motion.ul>
         </CardBody>
       </Card>
   );

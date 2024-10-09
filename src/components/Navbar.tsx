@@ -9,6 +9,7 @@ import {
   NavbarMenuItem,
   Link,
 } from "@nextui-org/react";
+import logoIcon from "../assets/logo.png";
 
 export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -16,52 +17,51 @@ export default function NavigationBar() {
   const menuItems = ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} shouldHideOnScroll>
+    <Navbar
+      className="h-40 bg-gradient-to-b to-[#0e306e] from-[#072458] from-30% to-90%"
+      onMenuOpenChange={setIsMenuOpen}
+      shouldHideOnScroll>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className="sm:hidden text-white"
         />
         <NavbarBrand>
-          <p className="font-bold text-inherit">ACME</p>
+          <Link href="#">
+            <img src={logoIcon} alt="logo" className="w-30 h-20" />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="end">
+      <NavbarContent className="hidden sm:flex gap-4 " justify="end">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="text-white text-lg" href="#" aria-current="page">
             Lorem
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link className="text-white text-lg" href="#">
             Lorem
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="text-white text-lg" href="#">
             Lorem
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="text-white text-lg" href="#">
             Lorem
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="!mt-24">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
               className="w-full"
               href="#"
+              color="foreground"
               size="lg">
               {item}
             </Link>
