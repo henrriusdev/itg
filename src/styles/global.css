@@ -1,0 +1,2 @@
+@import "tailwindcss";
+@source "../**/*.{astro,html,js,jsx,ts,tsx}";

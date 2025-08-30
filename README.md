@@ -1,50 +1,140 @@
-# React + TypeScript + Vite
+# ITG - Servicios de Tecnología de la Información
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una landing page moderna y responsive para ITG, empresa líder en servicios de tecnología de la información.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: Astro.js
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS
+- **Componentes Interactivos**: React
+- **Linting**: ESLint
+- **Formateo**: Prettier
+- **Despliegue**: Vercel
 
-## Expanding the ESLint configuration
+## 📋 Características
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Secciones de la Página
 
-- Configure the top-level `parserOptions` property like this:
+- **Header**: Navegación responsive con logo y menú móvil
+- **Hero Section**: Presentación principal con call-to-action
+- **Servicios Empresariales**:
+  - Centros de Datos
+  - Cableado Estructurado
+  - Cámaras de Seguridad
+- **Consultoría Especializada**:
+  - SAP BASIS
+  - IBM AIX
+  - IBM SPECTRUM
+  - ZABBIX
+- **Servicios Adicionales**: SEO, Desarrollo Web, Sistemas Administrativos
+- **Formulario de Contacto**: React component con validación
+- **Footer**: Información de contacto y redes sociales
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Funcionalidades
+
+- Diseño completamente responsive
+- Navegación suave entre secciones
+- Formulario de contacto con validación
+- Iconos SVG para cada servicio
+- Paleta de colores moderna (azules, grises, neutros)
+- Optimizado para SEO
+- Configurado para producción
+
+## Instalación y Desarrollo
+
+### Prerrequisitos
+
+- Node.js 18+ 
+- npm o yarn
+
+### Comandos
+
+```bash
+# Instalar dependencias
+npm install
+
+# Servidor de desarrollo
+npm run dev
+
+# Build para producción
+npm run build
+
+# Preview del build
+npm run preview
+
+# Linting
+npm run lint
+npm run lint:fix
+
+# Formateo de código
+npm run format
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Despliegue
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Vercel (Recomendado)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+1. Conecta tu repositorio a Vercel
+2. La configuración está lista en `vercel.json`
+3. Deploy automático en cada push
+
+### Configuración Manual
+
+```bash
+# Build del proyecto
+npm run build
+
+# Los archivos estáticos estarán en ./dist/
 ```
+
+## Estructura del Proyecto
+
+```
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── Services.astro
+│   │   ├── ContactForm.tsx
+│   │   └── Footer.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+├── .eslintrc.json
+├── .prettierrc
+├── astro.config.mjs
+├── tailwind.config.mjs
+├── tsconfig.json
+└── vercel.json
+```
+
+## Personalización
+
+### Colores
+
+Los colores principales están definidos en Tailwind CSS:
+- Primario: Azul (`blue-600`, `blue-700`)
+- Secundario: Índigo (`indigo-600`)
+- Neutros: Grises (`gray-50` a `gray-900`)
+
+### Contenido
+
+Para modificar el contenido, edita los componentes en `src/components/`:
+- Servicios: `Services.astro`
+- Información de contacto: `ContactForm.tsx` y `Footer.astro`
+- Texto principal: `Hero.astro`
+
+## Contacto
+
+- **Email**: contacto@itg.com
+- **Teléfono**: +1 (555) 123-4567
+- **Redes Sociales**: LinkedIn, Twitter, Facebook, Instagram
+
+## Licencia
+
+ 2024 ITG - Servicios de Tecnología de la Información. Todos los derechos reservados.
