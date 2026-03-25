@@ -8,22 +8,20 @@
 			<!-- Logo -->
 			<div class="flex-shrink-0">
 				<a href="#" class="flex items-center">
-					<div class="w-40 h-14 rounded-lg flex items-center justify-center bg-white border border-gray-200 px-3">
-						<img src="/logo.png" alt="ITG" class="w-full h-full object-contain logo-mark" />
-					</div>
+					<img src="/logo.png" alt="ITG" class="h-11 w-auto object-contain logo-mark" />
 				</a>
 			</div>
 
 			<!-- Desktop Navigation -->
 			<div class="hidden md:block">
 				<div class="ml-10 flex items-baseline space-x-8">
-					<a href="#servicios" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+					<a href="#servicios" class="text-blue-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">
 						Servicios
 					</a>
-					<a href="#consultoria" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+					<a href="#nosotros" class="text-blue-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">
 						Consultoría
 					</a>
-					<a href="#contacto" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+					<a href="#contacto" class="text-blue-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">
 						Contacto
 					</a>
 				</div>
@@ -43,13 +41,13 @@
 		<!-- Mobile Navigation -->
 		<div class="mobile-menu hidden md:hidden">
 			<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-				<a href="#servicios" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+				<a href="#servicios" class="text-blue-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
 					Servicios
 				</a>
-				<a href="#consultoria" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+				<a href="#nosotros" class="text-blue-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
 					Consultoría
 				</a>
-				<a href="#contacto" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+				<a href="#contacto" class="text-blue-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
 					Contacto
 				</a>
 			</div>
@@ -73,6 +71,7 @@
 
 <style>
 	.logo-mark {
-		filter: grayscale(1) contrast(1.05) brightness(0.1);
+		/* Tint the logo text to blue while keeping good contrast on white header */
+		filter: brightness(0) saturate(100%) invert(15%) sepia(89%) saturate(2231%) hue-rotate(211deg) brightness(93%) contrast(94%);
 	}
 </style>

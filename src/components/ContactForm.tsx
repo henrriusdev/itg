@@ -134,9 +134,9 @@ const ContactForm: React.FC = () => {
     <section id="contacto" className="py-20 bg-linear-to-br from-white/95 to-slate-100/90 backdrop-blur-[1px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-sm tracking-[0.2em] uppercase text-blue-900 font-semibold mb-3">Contáctanos</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Conecta tu operación en una sola plataforma</h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg tracking-[0.2em] uppercase text-blue-900 font-bold mb-3">Contáctanos</p>
+          <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-4 leading-[1.05]">Conecta tu operación en una sola plataforma</h2>
+          <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
             Cuéntanos qué necesitas integrar y te enviamos una ruta clara de implementación con inversión y tiempos.
           </p>
         </div>

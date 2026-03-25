@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Servicios - ITG">
+  <section class="min-h-[50vh] grid place-items-center px-4">
+    <div class="text-center max-w-xl">
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nuestros Servicios</h1>
+      <p class="text-slate-600 mb-6">Redirigiendo a la sección de servicios...</p>
+      <a
+        href="/#servicios"
+        class="inline-flex items-center justify-center bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+      >
+        Ir a Servicios
+      </a>
+    </div>
+  </section>
+
+  <script is:inline>
+    window.location.replace('/#servicios');
+  </script>
+</Layout>
