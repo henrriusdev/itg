@@ -26,6 +26,12 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
+  const nextSteps = [
+    'Un especialista te contacta para entender tu necesidad.',
+    'Definimos alcance, tiempos y propuesta económica.',
+    'Iniciamos implementación y soporte de tu servicio.'
+  ];
+
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
@@ -81,7 +87,7 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -117,7 +123,7 @@ const ContactForm: React.FC = () => {
       } else {
         setSubmitMessage(result.message || 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
       }
-    } catch (error) {
+    } catch (_error) {
       setSubmitMessage('Hubo un error de conexión. Por favor, inténtalo de nuevo más tarde.');
     } finally {
       setIsSubmitting(false);
@@ -125,164 +131,147 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section id="contacto" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Contáctanos
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            ¿Listo para transformar tu infraestructura tecnológica? Hablemos sobre tus necesidades.
+    <section id="contacto" className="py-20 bg-linear-to-br from-white/95 to-slate-100/90 backdrop-blur-[1px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-14">
+          <p className="text-sm tracking-[0.2em] uppercase text-blue-900 font-semibold mb-3">Contáctanos</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Conecta tu operación en una sola plataforma</h2>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Cuéntanos qué necesitas integrar y te enviamos una ruta clara de implementación con inversión y tiempos.
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Nombre */}
-              <div>
-                <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-2">
-                  Nombre Completo *
-                </label>
-                <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  value={formData.nombre}
-                  onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                    errors.nombre ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                  placeholder="Tu nombre completo"
-                />
-                {errors.nombre && (
-                  <p className="mt-1 text-sm text-red-600">{errors.nombre}</p>
-                )}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <aside className="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-8 shadow-2xl">
+            <h3 className="text-2xl font-bold mb-6">What happens next?</h3>
+            <div className="space-y-5 mb-8">
+              {nextSteps.map((step, index) => (
+                <div className="flex items-start gap-4" key={step}>
+                  <div className="w-8 h-8 shrink-0 rounded-full bg-white/15 border border-white/30 flex items-center justify-center text-sm font-semibold">
+                    {index + 1}
+                  </div>
+                  <p className="text-slate-200 leading-relaxed">{step}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-4 border-t border-white/20 pt-6">
+              <p className="text-slate-300 text-sm">20+ años de experiencia · Implementaciones SAP y no SAP</p>
+              <a className="block text-white font-medium hover:text-blue-200 transition-colors" href="mailto:ggonzalez@itgvzla.com">
+                ggonzalez@itgvzla.com
+              </a>
+              <a className="block text-white font-medium hover:text-blue-200 transition-colors" href="mailto:operaciones@itgvzla.com">
+                operaciones@itgvzla.com
+              </a>
+              <a className="block text-white font-medium hover:text-blue-200 transition-colors" href="tel:+584243055675">
+                +58 (424) 305-5675
+              </a>
+              <a className="block text-white font-medium hover:text-blue-200 transition-colors" href="tel:+584125053871">
+                +58 (412) 505-3871
+              </a>
+            </div>
+          </aside>
+
+          <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-8 md:p-10 shadow-xl">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="nombre" className="block text-sm font-medium text-slate-700 mb-2">
+                    Nombre completo *
+                  </label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleInputChange}
+                    className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                      errors.nombre ? 'border-red-500' : 'border-slate-300'
+                    }`}
+                    placeholder="Ej: Gustavo González"
+                  />
+                  {errors.nombre && <p className="mt-1 text-sm text-red-600">{errors.nombre}</p>}
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                    Correo electrónico *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                      errors.email ? 'border-red-500' : 'border-slate-300'
+                    }`}
+                    placeholder="empresa@correo.com"
+                  />
+                  {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
+                </div>
               </div>
 
-              {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Correo Electrónico *
+                <label htmlFor="telefono" className="block text-sm font-medium text-slate-700 mb-2">
+                  Teléfono *
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  value={formData.telefono}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                    errors.email ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                    errors.telefono ? 'border-red-500' : 'border-slate-300'
                   }`}
-                  placeholder="tu@email.com"
+                  placeholder="+58 (000) 000-0000"
                 />
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
-                )}
+                {errors.telefono && <p className="mt-1 text-sm text-red-600">{errors.telefono}</p>}
               </div>
-            </div>
 
-            {/* Teléfono */}
-            <div>
-              <label htmlFor="telefono" className="block text-sm font-medium text-gray-700 mb-2">
-                Número de Teléfono *
-              </label>
-              <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                value={formData.telefono}
-                onChange={handleInputChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                  errors.telefono ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="+1 (555) 123-4567"
-              />
-              {errors.telefono && (
-                <p className="mt-1 text-sm text-red-600">{errors.telefono}</p>
-              )}
-            </div>
+              <div>
+                <label htmlFor="mensaje" className="block text-sm font-medium text-slate-700 mb-2">
+                  Proyecto o requerimiento *
+                </label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows={6}
+                  value={formData.mensaje}
+                  onChange={handleInputChange}
+                  className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-y ${
+                    errors.mensaje ? 'border-red-500' : 'border-slate-300'
+                  }`}
+                  placeholder="Describe el servicio que deseas contratar o pagar para enviarte instrucciones inmediatas."
+                />
+                {errors.mensaje && <p className="mt-1 text-sm text-red-600">{errors.mensaje}</p>}
+              </div>
 
-            {/* Mensaje */}
-            <div>
-              <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700 mb-2">
-                Mensaje *
-              </label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                rows={6}
-                value={formData.mensaje}
-                onChange={handleInputChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-vertical ${
-                  errors.mensaje ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Cuéntanos sobre tu proyecto o necesidades tecnológicas..."
-              />
-              {errors.mensaje && (
-                <p className="mt-1 text-sm text-red-600">{errors.mensaje}</p>
-              )}
-            </div>
-
-            {/* Submit Button */}
-            <div className="text-center">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white transition-all duration-300 ${
+                className={`w-full inline-flex justify-center items-center px-8 py-4 text-base font-semibold rounded-xl text-white transition-all duration-300 ${
                   isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-blue-600 hover:bg-blue-700 transform hover:scale-105 shadow-lg hover:shadow-xl'
+                    ? 'bg-slate-400 cursor-not-allowed'
+                    : 'bg-blue-900 hover:bg-blue-800 shadow-lg hover:shadow-xl'
                 }`}
               >
-                {isSubmitting ? (
-                  <>
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Enviando...
-                  </>
-                ) : (
-                  <>
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                    </svg>
-                    Enviar Mensaje
-                  </>
-                )}
+                {isSubmitting ? 'Enviando solicitud...' : 'Solicitar propuesta y forma de pago'}
               </button>
-            </div>
 
-            {/* Submit Message */}
-            {submitMessage && (
-              <div className={`text-center p-4 rounded-lg ${
-                submitMessage.includes('error') 
-                  ? 'bg-red-100 text-red-700 border border-red-300' 
-                  : 'bg-green-100 text-green-700 border border-green-300'
-              }`}>
-                {submitMessage}
-              </div>
-            )}
-          </form>
-        </div>
-
-        {/* Contact Info */}
-        <div className="mt-12 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center">
-              <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-              <span className="text-gray-700">contacto@itg.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-              </svg>
-              <span className="text-gray-700">+1 (555) 123-4567</span>
-            </div>
+              {submitMessage && (
+                <div
+                  className={`text-center p-4 rounded-lg border ${
+                    submitMessage.includes('error')
+                      ? 'bg-red-50 text-red-700 border-red-200'
+                      : 'bg-green-50 text-green-700 border-green-200'
+                  }`}
+                >
+                  {submitMessage}
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </div>
