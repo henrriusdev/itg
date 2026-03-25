@@ -1,0 +1,32 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="ITG - Construcción y Saneamiento de Centros de Datos">
+  <Header/>
+  <section id="servicio-centros-datos" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h1 class="text-5xl font-extrabold text-blue-900 mb-6">Construcción y Saneamiento de Centros de Datos</h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Diseñamos y construimos Centros de Datos desde cero, cumpliendo con estándares internacionales de climatización de precisión, energía redundante y seguridad física.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop" alt="Centros de Datos" class="rounded-lg shadow-lg" />
+        </div>
+        <div>
+          <p class="text-lg text-gray-600 mb-4">
+            Transformamos infraestructuras caóticas y peligrosas en espacios ordenados, mejorando el flujo de aire, organizando el cableado y reduciendo drásticamente el riesgo de fallos por sobrecalentamiento.
+          </p>
+          <p class="text-lg text-gray-600 mb-4">
+            Beneficio clave: Protección física de datos críticos, reducción de riesgos operativos y optimización del rendimiento de su infraestructura.
+          </p>
+          <a href="#contacto" class="inline-block mt-6 bg-blue-900 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-800 transition-all">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

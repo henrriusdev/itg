@@ -143,7 +143,7 @@ const ContactForm: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <aside className="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-8 shadow-2xl">
-            <h3 className="text-2xl font-bold mb-6">What happens next?</h3>
+            <h3 className="text-2xl font-bold mb-6">¿Qué sigue ahora?</h3>
             <div className="space-y-5 mb-8">
               {nextSteps.map((step, index) => (
                 <div className="flex items-start gap-4" key={step}>

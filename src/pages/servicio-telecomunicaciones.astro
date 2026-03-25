@@ -1,0 +1,35 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="ITG - Especialistas en Telecomunicaciones">
+  <Header />
+  <section id="servicio-telecomunicaciones" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h1 class="text-5xl font-extrabold text-blue-900 mb-6">Especialistas en Telecomunicaciones</h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Diseñamos y desplegamos la red neuronal que conecta a toda su organización. Somos especialistas en infraestructura de conectividad.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop" alt="Telecomunicaciones" class="rounded-lg shadow-lg" />
+        </div>
+        <div>
+          <p class="text-lg text-gray-600 mb-4">
+            Desde cableado estructurado certificado y redes inalámbricas de alta densidad, hasta soluciones de seguridad perimetral y VPNs, aseguramos que sus datos fluyan de manera rápida, segura y eficiente entre todos sus dispositivos y sedes.
+          </p>
+          <p class="text-lg text-gray-600 mb-4">
+            Nuestro equipo utiliza las últimas tecnologías para garantizar que su red sea escalable y esté preparada para el futuro. Además, ofrecemos servicios de monitoreo y mantenimiento proactivo para identificar y resolver problemas antes de que afecten sus operaciones.
+          </p>
+          <p class="text-lg text-gray-600 mb-4">
+            Beneficio clave: Conectividad robusta, segura y escalable que elimina cuellos de botella y mejora la productividad de su organización.
+          </p>
+          <a href="#contacto" class="inline-block mt-6 bg-blue-900 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-800 transition-all">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
